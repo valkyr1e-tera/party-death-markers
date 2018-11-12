@@ -1,18 +1,16 @@
 {
-  "files": {
-    "index.js": "8142faf611bd7a62bd516515c45aee7a9371492ce83ed656b3b4eb15c847de36",
-    "module.json": "13de31799ed5b7f6d18948839167ef073e74786c06924b1682c8896bfb42ab43",
-    "README.md": "c146e8429c1cc1e8bbcaed6cc1c35f230146f948088c68400275e21c94079724"
-  },
-    "defs": {
-        "S_LOGIN": 10,
-        "S_PARTY_MEMBER_LIST": 7,
-        "S_DEAD_LOCATION": 2,
-        "S_SPAWN_USER": 13,
-        "S_PARTY_MEMBER_STAT_UPDATE": 3,
-        "S_LEAVE_PARTY_MEMBER": 2,
-        "S_LEAVE_PARTY": 1,
-        "S_DESPAWN_DROPITEM": 4,
-        "S_SPAWN_DROPITEM": 6
-    }
+	"files": {
+		"index.js": "f387fc2d2cf9132117cd2ea12c4971f480a7dddb20f73e2589752eb008919ff1",
+		"module.json": "67e9679b37bd1be101551a93688baf314f53413d7f0bbb7152b490c8a6a0608b"
+	},
+	"defs": {
+		"S_DEAD_LOCATION": 2,
+		"S_DESPAWN_DROPITEM": 4,
+		"S_LEAVE_PARTY": 1,
+		"S_LEAVE_PARTY_MEMBER": 2,
+		"S_PARTY_MEMBER_LIST": 7,
+		"S_PARTY_MEMBER_STAT_UPDATE": 3,
+		"S_SPAWN_DROPITEM": 6,
+		"S_SPAWN_USER": 13
+	}
 }
