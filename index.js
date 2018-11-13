@@ -1,5 +1,6 @@
 module.exports = function PartyDeathMarkers(mod) {
   let members = []
+  let markers = []
 
   mod.game.on('enter_game', removeAllMarkers)
 
@@ -38,8 +39,10 @@ module.exports = function PartyDeathMarkers(mod) {
       return
 
     removeMarker(member)
+    markers.push(member.playerId)
+
     mod.toClient('S_SPAWN_DROPITEM', 6, {
-      gameId: member.gameId,
+      gameId: member.playerId,
       loc: loc,
       item: getMarker(member.class),
       amount: 1,
@@ -62,12 +65,20 @@ module.exports = function PartyDeathMarkers(mod) {
   }
 
   function removeMarker(member) {
-    mod.toClient('S_DESPAWN_DROPITEM', 4, {
-      gameId: member.gameId
-    })
+    if (!member)
+      return
+
+    const id = member.playerId
+    if (markers.includes(id)) {
+      mod.toClient('S_DESPAWN_DROPITEM', 4, {
+        gameId: id
+      })
+      markers = markers.filter(marker => marker !== id)
+    }
   }
 
   function removeAllMarkers() {
     members.forEach(member => removeMarker(member))
+    markers = []
   }
 }
