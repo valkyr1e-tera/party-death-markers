@@ -35,7 +35,7 @@ module.exports = function PartyDeathMarkers(mod) {
   })
 
   function spawnMarker(member, loc) {
-    if (!member)
+    if (!member || mod.game.me.is(member.gameId))
       return
 
     removeMarker(member)
