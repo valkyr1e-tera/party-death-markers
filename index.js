@@ -9,12 +9,12 @@ module.exports = function PartyDeathMarkers(mod) {
   })
 
   mod.hook('S_DEAD_LOCATION', 2, event => {
-    spawnMarker(members.find(member => member.gameId.equals(event.gameId)), event.loc)
+    spawnMarker(members.find(member => member.gameId === event.gameId), event.loc)
   })
 
   mod.hook('S_SPAWN_USER', 13, event => {
     if (!event.alive)
-      spawnMarker(members.find(member => member.gameId.equals(event.gameId)), event.loc)
+      spawnMarker(members.find(member => member.gameId === event.gameId), event.loc)
   })
 
   mod.hook('S_PARTY_MEMBER_STAT_UPDATE', 3, event => {
