@@ -1,6 +1,6 @@
 {
 	"files": {
-		"index.js": "1dc08d24478e903d7c496903bb59b5911ce4d910174081f3a7dd0b9ec99edfc0",
+		"index.js": "10b1bead604c00128b917bcb08228f361e9e1831e0adac57a0155f9b10c1796b",
 		"module.json": "67e9679b37bd1be101551a93688baf314f53413d7f0bbb7152b490c8a6a0608b"
 	},
 	"defs": {
@@ -10,7 +10,7 @@
 		"S_LEAVE_PARTY_MEMBER": 2,
 		"S_PARTY_MEMBER_LIST": 7,
 		"S_PARTY_MEMBER_STAT_UPDATE": 3,
-		"S_SPAWN_DROPITEM": 6,
+		"S_SPAWN_DROPITEM": 7,
 		"S_SPAWN_USER": 13
 	}
 }

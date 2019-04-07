@@ -41,7 +41,8 @@ module.exports = function PartyDeathMarkers(mod) {
     removeMarker(member)
     markers.push(member.playerId)
 
-    mod.toClient('S_SPAWN_DROPITEM', 6, {
+    loc.z -= 50
+    mod.send('S_SPAWN_DROPITEM', 7, {
       gameId: member.playerId,
       loc: loc,
       item: getMarker(member.class),
@@ -60,7 +61,7 @@ module.exports = function PartyDeathMarkers(mod) {
       case 7:
         return 91113
       default:
-        return 98260
+        return 88716
     }
   }
 
@@ -70,7 +71,7 @@ module.exports = function PartyDeathMarkers(mod) {
 
     const id = member.playerId
     if (markers.includes(id)) {
-      mod.toClient('S_DESPAWN_DROPITEM', 4, {
+      mod.send('S_DESPAWN_DROPITEM', 4, {
         gameId: id
       })
       markers = markers.filter(marker => marker !== id)
